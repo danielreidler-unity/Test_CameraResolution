@@ -18,12 +18,6 @@
 
         Pass
         {
-//            Stencil
-//            {
-//                Ref 255
-//                Comp Always
-//                Pass Zero
-//            }
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
