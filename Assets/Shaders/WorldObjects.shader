@@ -14,8 +14,8 @@
         
         Stencil
         {
-            Ref 100
-            Comp LEqual
+            Ref 255
+            Comp Greater
         }
 
         CGPROGRAM

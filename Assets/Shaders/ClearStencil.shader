@@ -1,9 +1,9 @@
-﻿Shader "Hidden/ScopeStencil"
+﻿Shader "Hidden/ClearStencil"
 {
     SubShader
     {
         // No culling or depth
-        Tags { "RenderType"="Opauqe" "Queue"="Geometry-1" }
+        Tags { "RenderType"="Opauqe" "Queue"="Geometry-2" }
         Cull Back
         ZWrite Off
         //ZTest Always
@@ -11,19 +11,13 @@
         
         Stencil
         {
-            Ref 1
+            Ref 255
             Comp Always
             Pass Replace
         }
 
         Pass
         {
-//            Stencil
-//            {
-//                Ref 255
-//                Comp Always
-//                Pass Zero
-//            }
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
